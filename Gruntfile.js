@@ -12,6 +12,20 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    shell: {
+      mongo: {
+        command: 'mongod --dbpath ./data/db/',
+        options: {
+          async: true,
+          stdout: false,
+          stderr: true,
+          failOnError: true,
+          execOptions: {
+            cwd: '.'
+          }
+        }
+      }
+    },
     develop: {
       server: {
         file: 'bin/www'
