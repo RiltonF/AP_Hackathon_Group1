@@ -9,6 +9,7 @@ router.get('/', function(req, res) {
   res.render('view/index', { title: 'Express' });
 });
 
+/*
 router.get('/database', function(req,res){
   var url = 'mongodb://localhost:27017/test';
   MongoClient.connect(url, function(err, db) {
@@ -17,5 +18,6 @@ router.get('/database', function(req,res){
     db.close();
   });
 });
+*/
 
 module.exports = router;
