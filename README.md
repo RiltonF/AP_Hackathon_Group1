@@ -21,5 +21,5 @@ To start server do command: 'node bin/www' , 'grunt', 'nodemon bin/www' from the
    The first initialization of the home page might be a little slow.
    
    
-
-  
+##Database
+`mongod --dbpath data/db/`
