@@ -5,6 +5,38 @@
   padding: 0.2em 0;
 }
 
+h1{
+  font-size: 150%;
+}
+
+#class{
+  margin : 3%;
+  font-size: 200%;
+}
+#StudentenP{
+  float: left;
+}
+
+#AanwezigCheckbox{
+  float: right;
+}
+
+#header{
+  clear: both;
+  margin: 3%;
+  width: 30%;
+}
+
+#StudentDiv{
+  clear: both;
+  width: 20%;
+  margin: 3%;
+}
+
+button{
+  margin: 5%;
+}
+
 body {
   padding: 0;
 }

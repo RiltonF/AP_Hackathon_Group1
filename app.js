@@ -6,9 +6,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+/*var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+var db = require('./model/db');*/
 
 var routes = require('./routes/index');
+var tests = require('./routes/tests');
 //var users = require('./routes/user');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
 
 var app = express();
 
@@ -35,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'app')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 app.use('/', routes);
+app.use('/test', tests);
 //app.use('/users', users);
 
 /// catch 404 and forward to error handler
